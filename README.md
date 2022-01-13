@@ -55,4 +55,3 @@ ausgerichtet sein.
 * Speichern der Absendeadresse u. ähnlicher Angaben und vorausfüllen?
 * separate Betreffzeile?
 * Formatierung einer Nachricht als HTML-Nachricht?
-* Demo-Fotos machen und hier veröffentlichen
