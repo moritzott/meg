@@ -1,7 +1,7 @@
 # MEG - Mail-Entwurfs-Generator
 
-![demo-1](/img/meg-demo-1.png)
-![demo-2](/img/meg-demo-2.png)
+![demo-1](/img/meg-demo-1.png  | width=100)
+![demo-2](/img/meg-demo-2.png | width=100)
 
 ## Beschreibung
 
