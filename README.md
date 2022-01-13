@@ -1,7 +1,7 @@
 # MEG - Mail-Entwurfs-Generator
 
-![demo-1](/img/meg-demo-1.png  | width=100)
-![demo-2](/img/meg-demo-2.png | width=100)
+![demo-1](/img/meg-demo-1.png)
+![demo-2](/img/meg-demo-2.png)
 
 ## Beschreibung
 
@@ -17,7 +17,7 @@ in schnellerer Geschwindigkeit. Man muss sich auch weniger
 Gedanken um Schreibfehler machen.
 
 ## Demo
-* Live-Demo: [MEG](https://www...)
+* Live-Demo: [MEG](https://moritzott.github.io/meg/)
 
 ## Weitere Eckdaten
 * Mobile-First-Ansatz: Auf dem Handy passieren beim
