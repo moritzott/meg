@@ -1,0 +1,19 @@
+@media screen and (max-width: 350px) {
+    #contentDiv {
+        width: 270px;
+    }
+    
+}
+
+@media screen and (min-width: 351px) and (max-width: 370px) {
+    #contentDiv {
+        width: 315px;
+    }
+}
+
+@media screen and (min-width: 371px) {
+    #contentDiv {
+        width: 320px;
+    }
+    
+}

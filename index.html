@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MEG - Mail-Entwurfs-Generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/master/style.css">
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+
+        <!-- Main container -->
+        <div class="container" id="mainDiv">
+
+            <!-- content container -->
+            <div class="container mt-2">
+                <h1 class="display-1 text-center">Mail-Entwurfs-Generator</h1>
+
+                <p class="text-center">Schreiben Sie einfacher und schneller Ihre Mails!</p>
+
+                <!-- Info Modal -->
+                <div class="modal" id="infoModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Informationen</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- hier kommt der Info-Text rein -->
+                                <h6>Beschreibung</h6>
+                                
+                                <p>
+                                    Manchmal muss man Mails über das Smartphone schreiben.
+                                    Gegenüber einem PC hat dabei man den Nachteil, dass man sich öfter
+                                    vertippt und das Schreiben auf dem kleinen Touchscreen
+                                    unangenehm ist.
+                                </p>
+                                <p>
+                                    Der <em>MEG</em> ist ein Mail-Entwurfs-Generator, der 
+                                    gewöhnliche Begrüßungs- und Schlussfloskeln setzt, Absendername und Empfänger aufnimmt und die
+                                    Mail entsprechend mit Abständen automatisiert formatiert.
+                                    Man schreibt auf diese Weise hübschere und korrektere Mails
+                                    in schnellerer Geschwindigkeit. Man muss sich auch weniger
+                                    Gedanken um Schreibfehler machen.
+                                </p>
+                                <h6>Kontakt</h6>
+                                <p>Wenn Sie Fragen haben oder Erweiterungen vorschlagen möchten:</p>
+                                <div class="text-center mb-4">
+                                    <img src="/img/contactMail.png" alt="contactMailAddress" width="250px;">
+                                </div>
+                                <h6>Benutzte Komponenten</h6>
+                                <p>
+                                    Für die Icons wurde die Schriftart <em>Roboto</em> verwendet, deswegen
+                                    muss ich hier eine entsprechende Information kundtun:
+                                </p>
+                                <p>Name der benutzen Komponente: Roboto</p>
+                                <p>Lizenzgeber: Google Inc.</p>
+                                <p>Lizenz: <a href="https://www.apache.org/licenses/LICENSE-2.0.html" target="_blank">Apache License v2.0</a></p>
+                                <h6>Version</h6>
+                                <p>
+                                    Die aktuelle Version ist 1.0.0.
+                                </p>
+                                
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for output -->
+                <div class="modal" id="outputModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Ihre Mail:</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" id="">
+                                <textarea lang="de" class="form-control" name="" id="output" cols="" rows="10"></textarea>
+                                <!-- hier kommt der Mailinhalt rein -->
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                                <button class="btn btn-primary" id="copyMailButton">Kopiere Text</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="border rounded p-4 mx-auto mb-2" id="contentDiv">
+
+                    <form action="#" method="post" name="mailForm">
+                        <div class="mb-3">
+                            <label class="form-label" for="senderName">Ihr Name:</label>
+                            <input class="form-control" type="text" name="senderName" id="senderName" placeholder="Max Mustermann">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="receiverSex">Empfänger:</label>
+                            <select class="form-select" name="receiverSex" id="receiverSex">
+                                <option value="authority" selected>Organisation/Behörde</option>
+                                <option value="male">Mann</option>
+                                <option value="female">Frau</option>   
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="nameReceiver">Name des Empfängers (bei Personen nur Nachname):</label>
+                            <input class="form-control"  type="text" name="nameReceiver" id="nameReceiver">
+                        </div>
+                        <div class="mb-3">
+                            <label for="textContent" class="form-label">Text (mit kleinem Buchstaben beginnen):</label>
+                            <textarea lang="de" class="form-control" name="textContent" id="textContent" rows="10"></textarea>
+                        </div>
+                        <div-mb-3>
+                            <label class="form-label" for="grussformelSelect">Grußformel:</label>
+                            <select class="form-select" name="grussformelSelect" id="grussformelSelect">
+                                <option value="Mit freundlichen Grüßen">Mit freundlichen Grüßen</option>
+                                <option value="Hochachtungsvoll">Hochachtungsvoll</option>
+                                <option value="Beste Grüße">Beste Grüße</option>
+                                <option value="Mit besten Grüßen">Mit besten Grüßen</option>
+                                <option value="Liebe Grüße">Liebe Grüße</option>
+                                <option value="Herzliche Grüße">Herzliche Grüße</option>
+                                <option value="Viele Grüße">Viele Grüße</option>
+                            </select>
+                        </div-mb-3>
+                        <div class="mt-4 mb-1 text-center">
+                            <input type="submit" class="btn btn-primary" id="generateMailDraft" value="Erzeuge Mail-Entwurf" data-bs-toggle="modal" data-bs-target="#outputModal">
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="container mb-3 text-center">
+                    <button class="btn btn-link" id="infoButton" data-bs-toggle="modal" data-bs-target="#infoModal">Info zur Anwendung</button>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="js/bootstrap/bootstrap.bundle.js" charset="utf-8"></script>
+        <script src="js/app.js" charset="utf-8"></script>
+    </body>
+</html>
